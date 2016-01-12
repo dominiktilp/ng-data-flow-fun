@@ -1,0 +1,17 @@
+<div>
+  <h5>Select user</h5>
+  <ul>
+    <!--
+      We can access listItem in ListItemController:
+      {{$parent.$parent.listItem}}
+      And users is more deeper in ListsController:
+      {{$parent.$parent.$parent.users}}
+    -->
+    <li ng-repeat="user in $parent.$parent.$parent.users track by user._id" ng-class="{'selected': $parent.$parent.listItem.user_id==user._id}">
+      <a ng-click="$parent.$parent.selectUser(user)">
+        {{user.name}}
+      </a>
+    </li>
+  </ul>
+  <a ng-click="createNewUser()">create new user</a>
+</div>

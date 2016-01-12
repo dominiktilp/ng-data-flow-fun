@@ -1,0 +1,18 @@
+<div>
+  <h5>Assigned user</h5>
+  <!--
+    ng-if create new separated scope, so it break $parent
+    welcome $parent hell!
+  -->
+  <div class="type" ng-if="$parent.listItem.user._id">
+    <div>
+      <span class="name">{{$parent.$parent.listItem.user.name}}</span>
+    </div>
+    <div class="actions">
+      <a ng-click="$parent.$parent.editUser()">reassign</a>
+    </div>
+  </div>
+  <div class="type" ng-if="!$parent.listItem.user._id">
+    <a ng-click="$parent.$parent.editUser()">assign user</a>
+  </div>
+</div>

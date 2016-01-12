@@ -1,0 +1,15 @@
+<div class="head">
+  <!--
+    We know that this directive is inside a listItem directive.
+    So we can call $parent for access listItem directive $scope.
+    We hope that $parent is the correct parent.
+  -->
+  <div>
+    <span class="id">{{$parent.listItem._id}}</span>
+    <span class="name">{{$parent.listItem.name}}</span>
+  </div>
+  <div class="actions">
+    <a ng-click="$parent.edit()">edit</a>
+    <a ng-click="$parent.deleteListItem()">delete</a>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<li class="list-item">
+  <list-item-head ng-if="!isEdited"></list-item-head>
+  <list-item-edit ng-if="isEdited"></list-item-edit>
+  <list-item-user ng-if="!userIsEdited && !isEdited"></list-item-user>
+  <list-item-user-select ng-if="userIsEdited && !isEdited"></list-item-user-select>
+  <div ng-if="!userIsEdited && !isEdited">
+    <h5>Content</h5>    
+    <div class="contentEditable" contenteditable ng-model="listItem.content" ng-blur="updateListItem"></div>
+  </dvi>
+</li>

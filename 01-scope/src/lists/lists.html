@@ -1,0 +1,8 @@
+<ul class="list">
+  <!--
+    Try this without track by, it will always rerender all lists.
+    With track by you can say how to compare items for changes.
+  -->
+  <list-item ng-repeat="list in lists track by list._id" list-item="list"></list-item>
+  <add-list-item></add-list-item>
+</ul>
