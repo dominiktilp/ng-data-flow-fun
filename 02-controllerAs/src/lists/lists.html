@@ -1,0 +1,8 @@
+<ul class="list">
+  <!--
+    We need pass all needed function from ListsController to nested components.
+    If we need list of all users in (deep) nested listItemUserSelect component, we need pass this list from listController throught all controllers on path.
+  -->
+  <list-item ng-repeat="list in vm.lists track by list._id" list-item="list" users="vm.users" load-lists="vm.loadLists"></list-item>
+  <add-list-item add-list-item="vm.addListItem"></add-list-item>
+</ul>

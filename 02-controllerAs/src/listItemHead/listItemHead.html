@@ -1,0 +1,13 @@
+<div class="head">
+  <!--
+    We know that this directive have listItem param.
+  -->
+  <div>
+    <span class="id">{{vm.listItem._id}}</span>
+    <span class="name">{{vm.listItem.name}}</span>
+  </div>
+  <div class="actions">
+    <a ng-click="vm.edit()">edit</a>
+    <a ng-click="vm.delete()">delete</a>
+  </div>
+</div>

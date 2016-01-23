@@ -1,0 +1,30 @@
+<li class="list-item">
+  <!--
+    We need pass all needed function from ListItemController to nested components.
+
+  -->
+  <list-item-head ng-if="!vm.isEdited"
+    list-item="vm.listItem"
+    edit="vm.edit"
+    delete="vm.deleteListItem">
+  </list-item-head>
+  <list-item-edit ng-if="vm.isEdited"
+    list-item="vm.listItem"
+    update="vm.updateListItem">
+  </list-item-edit>
+  <list-item-user ng-if="!vm.userIsEdited && !vm.isEdited"
+    list-item="vm.listItem"
+    edit-user="vm.editUser">
+  </list-item-user>
+  <list-item-user-select ng-if="vm.userIsEdited && !vm.isEdited"
+    list-item="vm.listItem"
+    users="vm.users"
+    select-user="vm.selectUser"
+    >
+  </list-item-user-select>
+
+  <div ng-if="!vm.userIsEdited && !vm.isEdited">
+    <h5>Content</h5>
+    <div class="contentEditable" contenteditable ng-model="vm.listItem.content" ng-blur="vm.updateListItem"></div>
+  </dvi>
+</li>

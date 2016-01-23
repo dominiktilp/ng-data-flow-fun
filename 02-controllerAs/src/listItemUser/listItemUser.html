@@ -1,0 +1,17 @@
+<div>
+  <h5>Assigned user</h5>
+  <!--
+    No parent hell anymore!
+  -->
+  <div class="type" ng-if="vm.listItem.user._id">
+    <div>
+      <span class="name">{{vm.listItem.user.name}}</span>
+    </div>
+    <div class="actions">
+      <a ng-click="vm.editUser()">reassign</a>
+    </div>
+  </div>
+  <div class="type" ng-if="!vm.listItem.user._id">
+    <a ng-click="vm.editUser()">assign user</a>
+  </div>
+</div>

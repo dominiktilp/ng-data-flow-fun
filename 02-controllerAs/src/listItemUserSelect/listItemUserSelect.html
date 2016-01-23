@@ -1,0 +1,14 @@
+<div>
+  <h5>Select user</h5>
+  <ul>
+    <!--
+      No parent hell, but we must not forget pass all needed params into nested components
+    -->
+    <li ng-repeat="user in vm.users track by user._id" ng-class="{'selected': vm.listItem.user_id==user._id}">
+      <a ng-click="vm.selectUser(user)">
+        {{user.name}}
+      </a>
+    </li>
+  </ul>
+  <a ng-click="vm.createNewUser()">create new user</a>
+</div>
