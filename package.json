@@ -4,8 +4,9 @@
   "description": "",
   "main": "",
   "scripts": {
-    "01": "node 01-scope/webpack.server.js",
-    "build-01": "$(npm bin)/webpack --config 01-scope/webpack.config.js --progress --colors"
+    "watch:01": "node 01-scope/webpack.server.js",
+    "watch:02": "node 02-controllerAs/webpack.server.js"
+
   },
   "repository": {
     "type": "git",

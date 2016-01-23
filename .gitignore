@@ -1,3 +1,5 @@
+npm-debug.log
+
 # ignore node modules
 /node_modules
 # ignore build files

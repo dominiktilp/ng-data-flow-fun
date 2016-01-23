@@ -17,9 +17,9 @@ var server = new WebpackDevServer(compiler, {
   publicPath: '/'
 });
 
-server.listen(8881, 'localhost', function (error) {
+server.listen(8801, 'localhost', function (error) {
   if (error) {
     console.log(error);
   }
-  console.log('Server running at localhost:8881');
+  console.log('Server running at localhost:8801');
 });
